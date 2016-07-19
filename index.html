@@ -5,14 +5,13 @@
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/index_styles.css">
 	<link rel="stylesheet" type="text/css" href="fullPageJS/jquery.fullPage.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script src="fullPageJS/vendors/jquery.easings.min.js"></script>
 	<script type="text/javascript" src="fullPageJS/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -52,7 +51,7 @@
 						<div class="col-md-6 col-md-offset-3">
 							<div>
 								<p>
-									Apart from that, I'm <a href="https://www.freecodecamp.com/nedphlix" class="link" target="_blank">learning how to program</a>, mostly in JavaScript. Whenever I have free time, <a href="https://www.google.fr/maps/@30.332886,13.6644984,3z/data=!4m2!6m1!1szlg788xnDJ6A.kzyQR-z44gLQ?hl=en" class="link" target="_blank">I love traveling</a> and sometimes taking <a href="https://www.instagram.com/nedphlix/" class="link" target="_blank">pictures</a> from the places I go.
+									Apart from that, I'm <a href="https://www.freecodecamp.com/nedphlix" class="link" target="_blank">learning how to program</a> with JavaScript. In my free time, <a href="https://www.google.fr/maps/@30.332886,13.6644984,3z/data=!4m2!6m1!1szlg788xnDJ6A.kzyQR-z44gLQ?hl=en" class="link" target="_blank">I love traveling</a> and sometimes take <a href="https://www.instagram.com/nedphlix/" class="link" target="_blank">pictures</a> from the places I go.
 								</p>
 							</div>
 						</div>
@@ -76,41 +75,67 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="section">
-			<div class="container-fluid portfolio">
-				
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3">
-						<div class="text-center pf-nav">
-							<p><span class="scroll-down"><i class="fa fa-chevron-up" aria-hidden="true"></i></span></p>
-						</div>
+			<div class="container-fluid">
+				<div id="btn-previous-container">
+					<div class="btn-previous-placeholder-container">
+						<div class="btn-previous-placeholder btn-previous-placeholder-top"></div>
+						<div class="btn-previous-placeholder"></div>
+					</div>
+					<div id="btn-previous-text-container">
+						<p class="btn-previous-p">Previous</p>
 					</div>
 				</div>
-
-				<div class="row img-top-row">
-					<div class="col-md-6 col-md-offset-3">
-						<div class="col-md-6">
-							<div class="img-container"></div>
-						</div>
-						<div class="col-md-6">
-							<div class="img-container"></div>
-						</div>
+				<div id="btn-next-container">
+					<div id="btn-next-text-container">
+						<p class="btn-previous-p">Next</p>
 					</div>
+					<div class="btn-previous-placeholder-container">
+						<div class="btn-previous-placeholder btn-previous-placeholder-top"></div>
+						<div class="btn-previous-placeholder"></div>
+					</div>
+					
 				</div>
 
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3">
-						<div class="col-md-6">
-							<div class="img-container"></div>
-						</div>
-						<div class="col-md-6">
-							<div class="img-container"></div>
+				<div class="row" id="pf-top-row">
+					<div id="pf-upper-left-col" class="col-md-4"></div>
+					<div id="pf-upper-mid-col" class="col-md-4">
+						<div id="pf-tags-placeholder"></div>
+						<div id="pf-tags">#JavaScript&nbsp;&nbsp;#Bootstrap&nbsp;&nbsp;#HTML</div>
+					</div>
+					<div id="pf-upper-right-col" class="col-md-4"></div>					
+				</div>
+				<div class="row" id="pf-mid-row">
+					<div id="pf-mid-left-col" class="col-md-4">
+						<div class="pf-title-upper-placeholder"></div>
+						<div class="pf-title-container">Javascript Calculator<br><span id="pf-count-span">1 of 6</span></div>
+					</div>
+					<div id="pf-mid-mid-col" class="col-md-4 pf-img-col">
+						<div id="pf-img-container">
+							<img src="macbookpro.jpg" class="img-responsive">
 						</div>
 					</div>
+					<div id="pf-mid-right-col" class="col-md-4"></div>					
 				</div>
-
+				<div class="row" id="pf-bottom-row">
+					<div class="col-md-4"></div>
+					<div id="pf-lower-mid-col" class="col-md-4">
+						<div id="pf-link-container">
+							<a href="" target="_blank" class="pf-links">View website</a>
+							<a href="" target="_blank" class="pf-links">Github</a>
+						</div>
+						<div id="pf-description-box">
+							<div id="pf-description-text">
+								Simple calculator built in Javascript that can add, subtract, multiply and divide two numbers.
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4"></div>
+				</div>
 			</div>
 		</div>
+
 	</div>
 
 </body>
