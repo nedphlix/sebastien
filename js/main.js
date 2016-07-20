@@ -1,4 +1,4 @@
-var imgContainer, pfDescBox, pfLinkContainer, pfTagsPlaceholder;
+var imgContainer, pfDescBox, pfLinkContainer, pfTagsPlaceholder, pfTags;
 var pfTopRow, pfMidRow, pfBottomRow;
 var previousButtonContainer, nextButtonContainer;
 
@@ -8,6 +8,7 @@ function getElements() {
 	pfDescText = document.getElementById("pf-description-text");
 	pfLinkContainer = document.getElementById("pf-link-container");
 	pfTagsPlaceholder = document.getElementById("pf-tags-placeholder");
+	pfTags = document.getElementById("");
 	pfTopRow = document.getElementById("pf-top-row");
 	pfMidRow = document.getElementById("pf-mid-row");
 	pfBottomRow = document.getElementById("pf-bottom-row");
@@ -18,20 +19,21 @@ function getElements() {
 function calculateImgContainerHeight() {
 	// Calculate the image container height, it is set to its width which is 100% of the mid column
 	var imgContainerWidth = imgContainer.offsetWidth;
-	var toEval1 = 'imgContainer.style.height = "' + imgContainerWidth + 'px"';
+	var imgContainerHeight = (imgContainerWidth * 0.625)
+	var toEval1 = 'imgContainer.style.height = "' + imgContainerHeight + 'px"';
 	eval(toEval1);
 
 	// We need to adjust the height of the rows accordingly now
-	var toEval2 = 'pfMidRow.style.height = "' + imgContainerWidth + 'px"';
+	var toEval2 = 'pfMidRow.style.height = "' + imgContainerHeight + 'px"';
 	eval(toEval2);
 	var viewportHeight = document.documentElement.clientHeight;
-	var toEval6 = 'pfTopRow.style.height = "' + ((viewportHeight - imgContainerWidth) / 2) + 'px"';
+	var toEval6 = 'pfTopRow.style.height = "' + ((viewportHeight - imgContainerHeight) / 2) + 'px"';
 	eval(toEval6);
-	var toEval7 = 'pfBottomRow.style.height = "' + ((viewportHeight - imgContainerWidth) / 2) + 'px"';
+	var toEval7 = 'pfBottomRow.style.height = "' + ((viewportHeight - imgContainerHeight) / 2) + 'px"';
 	eval(toEval7);
 
 	// Now the width of the description box & the link container to its left
-	var toEval3 = 'pfDescBox.style.width = "' + (imgContainerWidth * (2/3)) + 'px"';
+	var toEval3 = 'pfDescBox.style.width = "' + (imgContainerWidth * (0.6)) + 'px"';
 	eval(toEval3);
 	var toEval5 = 'pfDescBox.style.left = "' + (imgContainerWidth / 2) + 'px"';
 	eval(toEval5);
@@ -39,7 +41,7 @@ function calculateImgContainerHeight() {
 	eval(toEval4);
 
 	// Same for the tags to be aligned at the bottom
-	var toEval8 = 'pfTagsPlaceholder.style.height = "' + (((viewportHeight - imgContainerWidth) / 2) - 24) + 'px"';
+	var toEval8 = 'pfTagsPlaceholder.style.height = "' + (((viewportHeight - imgContainerHeight) / 2) - 37) + 'px"';
 	eval(toEval8);
 
 	// Position the previous/next buttons
