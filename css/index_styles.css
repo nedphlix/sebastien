@@ -55,7 +55,6 @@ p {
 
 .heading {
 	color: #e87d2b;
-	font-weight: bold;
 	font-family: 'Vollkorn';
 	font-size: 30px;
 }
@@ -123,7 +122,6 @@ p {
 	width: 100%;
 	line-height: 30px;
 	font-size: 30px;
-	font-weight: bold;
 	color: #cf1b41;
 }
 
@@ -194,6 +192,7 @@ p {
 	color: #000;
 	font-family: 'Montserrat';
 	font-size: 12px;
+	line-height: 21px;
 }
 
 
@@ -223,7 +222,14 @@ p {
 
 .btn-previous-placeholder-top {
 	height: 12px;
+}
+
+#arrow-up {
 	border-bottom: 1px solid #000;
+}
+
+#arrow-down {
+	border-top: 1px solid #000;
 }
 
 #btn-previous-text-container {

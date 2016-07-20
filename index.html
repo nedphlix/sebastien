@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/index_styles.css">
 	<link rel="stylesheet" type="text/css" href="fullPageJS/jquery.fullPage.css" />
 
@@ -74,20 +75,20 @@
 			<div class="container-fluid">
 				<div id="btn-previous-container">
 					<div class="btn-previous-placeholder-container">
-						<div class="btn-previous-placeholder btn-previous-placeholder-top"></div>
-						<div class="btn-previous-placeholder"></div>
+						<div class="btn-previous-placeholder btn-previous-placeholder-top" id="arrow-up"></div>
+						<div class="btn-previous-placeholder btn-previous-placeholder-bottom"></div>
 					</div>
 					<div id="btn-previous-text-container">
-						<p class="btn-previous-p">Previous</p>
+						<p class="btn-previous-p">Previous&nbsp;<i class="fa fa-arrow-up" aria-hidden="true"></i></p>
 					</div>
 				</div>
 				<div id="btn-next-container">
 					<div id="btn-next-text-container">
-						<p class="btn-previous-p">Next</p>
+						<p class="btn-previous-p"><i class="fa fa-arrow-up" aria-hidden="true"></i>&nbsp;Next</p>
 					</div>
 					<div class="btn-previous-placeholder-container">
 						<div class="btn-previous-placeholder btn-previous-placeholder-top"></div>
-						<div class="btn-previous-placeholder"></div>
+						<div class="btn-previous-placeholder btn-previous-placeholder-bottom" id="arrow-down"></div>
 					</div>
 					
 				</div>
@@ -122,6 +123,69 @@
 						<div id="pf-description-box">
 							<div id="pf-description-text">
 								Shows the weather in your current location. You can switch between Celsius and Fahrenheit, and change the city. Depending on the weather, a different background image is shown.
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="container-fluid">
+				<div id="btn-previous-container">
+					<div class="btn-previous-placeholder-container">
+						<div class="btn-previous-placeholder btn-previous-placeholder-top" id="arrow-up"></div>
+						<div class="btn-previous-placeholder btn-previous-placeholder-bottom"></div>
+					</div>
+					<div id="btn-previous-text-container">
+						<p class="btn-previous-p">Previous</p>
+					</div>
+				</div>
+				<div id="btn-next-container">
+					<div id="btn-next-text-container">
+						<p class="btn-previous-p">Next</p>
+					</div>
+					<div class="btn-previous-placeholder-container">
+						<div class="btn-previous-placeholder btn-previous-placeholder-top"></div>
+						<div class="btn-previous-placeholder btn-previous-placeholder-bottom" id="arrow-down"></div>
+					</div>
+					
+				</div>
+
+				<div class="row" id="pf-top-row">
+					<div id="pf-upper-left-col" class="col-md-3"></div>
+					<div id="pf-upper-mid-col" class="col-md-6">
+						
+						<div id="pf-tags-placeholder"></div>
+						<div id="pf-tags">Pomodoro Clock<span id="pf-counter">2 of 6</span></div>
+						
+
+					</div>
+					<div id="pf-upper-right-col" class="col-md-3"></div>					
+				</div>
+				<div class="row" id="pf-mid-row">
+					<div id="pf-mid-left-col" class="col-md-3"></div>
+					<div id="pf-mid-mid-col" class="col-md-6 pf-img-col">
+						<div id="pf-img-container">
+							<img src="pomodoro.png" class="img-responsive">
+						</div>
+					</div>
+					<div id="pf-mid-right-col" class="col-md-3"></div>					
+				</div>
+				<div class="row" id="pf-bottom-row">
+					<div class="col-md-3"></div>
+					<div id="pf-lower-mid-col" class="col-md-6">
+						<div id="pf-link-container">
+							<a href="" target="_blank" class="pf-links">View website</a>
+							<a href="" target="_blank" class="pf-links">View on Github</a>
+						</div>
+						<div id="pf-description-box">
+							<div id="pf-description-text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud ut aliquip ex ea commodo
+								consequat.
 							</div>
 						</div>
 					</div>
