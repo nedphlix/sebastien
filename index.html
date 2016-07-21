@@ -17,7 +17,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
     		$('#fullpage').fullpage({
-    			sectionsColor : ['#ccc', '#eee'],
+    			anchors: ['firstPage', 'secondPage', 'thirdPage']
     		});
 		});
 	</script>
@@ -26,20 +26,24 @@
 <body>
 
 	<div id="fullpage">
-		<div class="section">
+		<div class="section" id="section0">
 			<div class="container-fluid top-hero vertical-center">
-				<div>
+				<div class="wrapper">
 
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3">
+						<div class="col-md-6 col-md-offset-3 col-sm-9 col-sm-offset-1">
 							<div>
-								<p class="heading">Sébastien Phlix</p>
+								<p class="heading">Sébastien Phlix<span id="social-icons">
+									<a href="https://twitter.com/sebastienphl" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+									<a href="https://fr.linkedin.com/in/sphlix" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+									<a href="https://github.com/nedphlix" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>								
+								</span></p>
 							</div>
 						</div>
 					</div>
 
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3">
+						<div class="col-md-6 col-md-offset-3 col-sm-9 col-sm-offset-1">
 							<div>
 								<p>
 									<br>I'm a final-year grad student in business and currently live in Paris, France. With some friends, I'm building <a href="http://bloomsource.co/" class="link" target="_blank">Bloomsource</a>, the first collaborative startup library.
@@ -49,20 +53,20 @@
 					</div>
 
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3">
+						<div class="col-md-6 col-md-offset-3 col-sm-9 col-sm-offset-1">
 							<div>
 								<p>
-									Apart from that, I'm <a href="https://www.freecodecamp.com/nedphlix" class="link" target="_blank">learning how to program</a> with JavaScript. In my free time, <a href="https://www.google.fr/maps/@30.332886,13.6644984,3z/data=!4m2!6m1!1szlg788xnDJ6A.kzyQR-z44gLQ?hl=en" class="link" target="_blank">I love traveling</a> and sometimes take <a href="https://www.instagram.com/nedphlix/" class="link" target="_blank">pictures</a> from the places I go.
+									In my free time, <a href="https://www.google.fr/maps/@30.332886,13.6644984,3z/data=!4m2!6m1!1szlg788xnDJ6A.kzyQR-z44gLQ?hl=en" class="link" target="_blank">I love traveling</a> and sometimes take <a href="https://www.instagram.com/nedphlix/" class="link" target="_blank">pictures</a> from the places I go.
 								</p>
 							</div>
 						</div>
 					</div>
 
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3">
+						<div class="col-md-6 col-md-offset-3 col-sm-9 col-sm-offset-1">
 							<div>
 								<p class="social-text">
-									Scroll down to see what I've coded till now. You can get in touch with me on <a href="https://twitter.com/sebastienphl" target="_blank" class="link-social">Twitter</a> / <a href="https://fr.linkedin.com/in/sphlix" target="_blank" class="link-social">LinkedIn</a> / <a href="https://github.com/nedphlix" target="_blank" class="link-social">Github</a>.
+									Apart from that, I'm <a href="https://www.freecodecamp.com/nedphlix" class="link" target="_blank">learning how to program</a> with JavaScript. You can scroll down to see what I've coded till now.
 								</p>
 							</div>
 						</div>
@@ -71,129 +75,130 @@
 			</div>
 		</div>
 
-		<div class="section">
+		<div class="section" id="section1">
 			<div class="container-fluid">
-				<div id="btn-previous-container">
-					<div class="btn-previous-placeholder-container">
-						<div class="btn-previous-placeholder btn-previous-placeholder-top" id="arrow-up"></div>
-						<div class="btn-previous-placeholder btn-previous-placeholder-bottom"></div>
-					</div>
-					<div id="btn-previous-text-container">
-						<p class="btn-previous-p">Previous&nbsp;<i class="fa fa-arrow-up" aria-hidden="true"></i></p>
-					</div>
-				</div>
-				<div id="btn-next-container">
-					<div id="btn-next-text-container">
-						<p class="btn-previous-p"><i class="fa fa-arrow-up" aria-hidden="true"></i>&nbsp;Next</p>
-					</div>
-					<div class="btn-previous-placeholder-container">
-						<div class="btn-previous-placeholder btn-previous-placeholder-top"></div>
-						<div class="btn-previous-placeholder btn-previous-placeholder-bottom" id="arrow-down"></div>
-					</div>
-					
-				</div>
-
-				<div class="row" id="pf-top-row">
-					<div id="pf-upper-left-col" class="col-md-3"></div>
-					<div id="pf-upper-mid-col" class="col-md-6">
-						
-						<div id="pf-tags-placeholder"></div>
-						<div id="pf-tags">Local Weather App<span id="pf-counter">1 of 6</span></div>
-						
-
-					</div>
-					<div id="pf-upper-right-col" class="col-md-3"></div>					
-				</div>
-				<div class="row" id="pf-mid-row">
-					<div id="pf-mid-left-col" class="col-md-3"></div>
-					<div id="pf-mid-mid-col" class="col-md-6 pf-img-col">
-						<div id="pf-img-container">
-							<img src="weather.png" class="img-responsive">
+				<a href="index.html#firstPage">
+					<div class="btn-previous-container">
+						<div class="btn-previous-placeholder-container">
+							<div class="btn-previous-placeholder btn-previous-placeholder-top arrow-up"></div>
+							<div class="btn-previous-placeholder btn-previous-placeholder-bottom"></div>
+						</div>
+						<div class="btn-previous-text-container">
+							<p class="btn-previous-p">Previous&nbsp;<i class="fa fa-arrow-up" aria-hidden="true"></i></p>
 						</div>
 					</div>
-					<div id="pf-mid-right-col" class="col-md-3"></div>					
+				</a>
+				<a href="index.html#thirdPage">	
+					<div class="btn-next-container">
+						<div class="btn-next-text-container">
+							<p class="btn-previous-p"><i class="fa fa-arrow-down" aria-hidden="true"></i>&nbsp;Next</p>
+						</div>
+						<div class="btn-previous-placeholder-container">
+							<div class="btn-previous-placeholder btn-previous-placeholder-top"></div>
+							<div class="btn-previous-placeholder btn-previous-placeholder-bottom arrow-down"></div>
+						</div>
+					</div>
+				</a>
+
+				<div class="row pf-top-row">
+					<div id="pf-upper-left-col" class="col-md-3 col-sm-2"></div>
+					<div class="col-md-6 col-sm-8 pf-upper-mid-col">
+						
+						<div class="pf-tags-placeholder"></div>
+						<div class="pf-tags">Local Weather App<span class="pf-counter">1 of 6</span></div>
+						
+
+					</div>
+					<div id="pf-upper-right-col" class="col-md-3 col-sm-2"></div>					
 				</div>
-				<div class="row" id="pf-bottom-row">
-					<div class="col-md-3"></div>
-					<div id="pf-lower-mid-col" class="col-md-6">
-						<div id="pf-link-container">
+				<div class="row pf-mid-row">
+					<div class="col-md-3 col-sm-2 pf-mid-left-col"></div>
+					<div id="pf-mid-mid-col" class="col-md-6 col-sm-8 pf-img-col">
+						<div class="pf-img-container">
+							<img src="images/weatherapp.png" class="img-responsive">
+						</div>
+					</div>
+					<div id="pf-mid-right-col" class="col-md-3 col-sm-2 col-sm-2"></div>					
+				</div>
+				<div class="row pf-bottom-row">
+					<div class="col-md-3 col-sm-2"></div>
+					<div class="col-md-6 col-sm-8 pf-lower-mid-col">
+						<div class="pf-link-container">
 							<a href="" target="_blank" class="pf-links">View website</a>
 							<a href="" target="_blank" class="pf-links">View on Github</a>
 						</div>
-						<div id="pf-description-box">
-							<div id="pf-description-text">
+						<div class="pf-description-box">
+							<div class="pf-description-text">
 								Shows the weather in your current location. You can switch between Celsius and Fahrenheit, and change the city. Depending on the weather, a different background image is shown.
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3"></div>
+					<div class="col-md-3 col-sm-2"></div>
 				</div>
 			</div>
 		</div>
 
-		<div class="section">
+		<div class="section" id="section2">
 			<div class="container-fluid">
-				<div id="btn-previous-container">
-					<div class="btn-previous-placeholder-container">
-						<div class="btn-previous-placeholder btn-previous-placeholder-top" id="arrow-up"></div>
-						<div class="btn-previous-placeholder btn-previous-placeholder-bottom"></div>
-					</div>
-					<div id="btn-previous-text-container">
-						<p class="btn-previous-p">Previous</p>
-					</div>
-				</div>
-				<div id="btn-next-container">
-					<div id="btn-next-text-container">
-						<p class="btn-previous-p">Next</p>
-					</div>
-					<div class="btn-previous-placeholder-container">
-						<div class="btn-previous-placeholder btn-previous-placeholder-top"></div>
-						<div class="btn-previous-placeholder btn-previous-placeholder-bottom" id="arrow-down"></div>
-					</div>
-					
-				</div>
-
-				<div class="row" id="pf-top-row">
-					<div id="pf-upper-left-col" class="col-md-3"></div>
-					<div id="pf-upper-mid-col" class="col-md-6">
-						
-						<div id="pf-tags-placeholder"></div>
-						<div id="pf-tags">Pomodoro Clock<span id="pf-counter">2 of 6</span></div>
-						
-
-					</div>
-					<div id="pf-upper-right-col" class="col-md-3"></div>					
-				</div>
-				<div class="row" id="pf-mid-row">
-					<div id="pf-mid-left-col" class="col-md-3"></div>
-					<div id="pf-mid-mid-col" class="col-md-6 pf-img-col">
-						<div id="pf-img-container">
-							<img src="pomodoro.png" class="img-responsive">
+				<a href="index.html#secondPage">
+					<div class="btn-previous-container">
+						<div class="btn-previous-placeholder-container">
+							<div class="btn-previous-placeholder btn-previous-placeholder-top arrow-up"></div>
+							<div class="btn-previous-placeholder btn-previous-placeholder-bottom"></div>
+						</div>
+						<div class="btn-previous-text-container">
+							<p class="btn-previous-p">Previous&nbsp;<i class="fa fa-arrow-up" aria-hidden="true"></i></p>
 						</div>
 					</div>
-					<div id="pf-mid-right-col" class="col-md-3"></div>					
+				</a>
+				<a href="index.html#fourthPage">	
+					<div class="btn-next-container">
+						<div class="btn-next-text-container">
+							<p class="btn-previous-p"><i class="fa fa-arrow-down" aria-hidden="true"></i>&nbsp;Next</p>
+						</div>
+						<div class="btn-previous-placeholder-container">
+							<div class="btn-previous-placeholder btn-previous-placeholder-top"></div>
+							<div class="btn-previous-placeholder btn-previous-placeholder-bottom arrow-down"></div>
+						</div>
+					</div>
+				</a>
+
+				<div class="row pf-top-row">
+					<div id="pf-upper-left-col" class="col-md-3 col-sm-2"></div>
+					<div class="col-md-6 col-sm-8  pf-upper-mid-col">
+						<div class="pf-tags-placeholder"></div>
+						<div class="pf-tags">Pomodoro Clock<span class="pf-counter">2 of 6</span></div>
+					</div>
+					<div id="pf-upper-right-col" class="col-md-3 col-sm-2"></div>					
 				</div>
-				<div class="row" id="pf-bottom-row">
-					<div class="col-md-3"></div>
-					<div id="pf-lower-mid-col" class="col-md-6">
-						<div id="pf-link-container">
+				<div class="row pf-mid-row">
+					<div class="col-md-3 col-sm-2 pf-mid-left-col"></div>
+					<div id="pf-mid-mid-col" class="col-md-6 col-sm-8 pf-img-col">
+						<div class="pf-img-container">
+							<img src="images/pomodoro.png" class="img-responsive">
+						</div>
+					</div>
+					<div id="pf-mid-right-col" class="col-md-3 col-sm-2"></div>					
+				</div>
+				<div class="row pf-bottom-row">
+					<div class="col-md-3 col-sm-2"></div>
+					<div class="col-md-6 col-sm-8 pf-lower-mid-col">
+						<div class="pf-link-container">
 							<a href="" target="_blank" class="pf-links">View website</a>
 							<a href="" target="_blank" class="pf-links">View on Github</a>
 						</div>
-						<div id="pf-description-box">
-							<div id="pf-description-text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud ut aliquip ex ea commodo
-								consequat.
+						<div class="pf-description-box">
+							<div class="pf-description-text">
+								Lorem ipsum dolor sit amet, consectetur, sed do eiusmod
+								tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis consequat.
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3"></div>
+					<div class="col-md-3 col-sm-2"></div>
 				</div>
 			</div>
 		</div>
-
 	</div>
 
 </body>
