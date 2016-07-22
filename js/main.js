@@ -1,6 +1,5 @@
 var imgContainer, pfDescBox, pfLinkContainer, pfTagsPlaceholder;
 var pfTopRow, pfMidRow, pfBottomRow;
-var previousButtonContainer, nextButtonContainer;
 
 var viewportHeight = document.documentElement.clientHeight;
 
@@ -8,17 +7,17 @@ function getElements() {
 	imgContainer = document.querySelectorAll(".pf-img-container");
 	pfDescBox = document.querySelectorAll(".pf-description-box");
 	pfLinkContainer = document.querySelectorAll(".pf-link-container");
-	pfTagsPlaceholder = document.querySelectorAll(".pf-tags-placeholder");
+	pfTagsPlaceholder = document.querySelectorAll(".pf-title-placeholder");
 	pfTopRow = document.querySelectorAll(".pf-top-row");
 	pfMidRow = document.querySelectorAll(".pf-mid-row");
 	pfBottomRow = document.querySelectorAll(".pf-bottom-row");
-	previousButtonContainer = document.querySelectorAll(".btn-previous-container");
-	nextButtonContainer = document.querySelectorAll(".btn-next-container");
 }
 
-function calculateImgContainerHeight() {
+function calculateDimensions() {
 
-	// Calculate the image container height, it is set to its width which is 100% of the mid column
+	// This is for the portfolio part
+
+	// Calculate the image container height, it is set to its width, which in turn is 100% of the mid column
 	var imgContainerWidth = imgContainer[0].offsetWidth;
 	var imgContainerHeight = (imgContainerWidth * 0.625)
 	for (var a = 0; a < imgContainer.length; a++) {
@@ -54,29 +53,21 @@ function calculateImgContainerHeight() {
 		eval(toEvalH);
 	}
 
-	// Same for the tags to be aligned at the bottom
+	// Same for the title to be aligned at the bottom
+	var pfTitleHeight = 37;
+	var pfTagsPlaceholderHeight = (((viewportHeight - imgContainerHeight) / 2) - pfTitleHeight);
 	for (var j = 0; j < pfTagsPlaceholder.length; j++) {
-		var toEvalJ = 'pfTagsPlaceholder[' + j + '].style.height = "' + (((viewportHeight - imgContainerHeight) / 2) - 37) + 'px"';
+		var toEvalJ = 'pfTagsPlaceholder[' + j + '].style.height = "' + pfTagsPlaceholderHeight + 'px"';
 		eval(toEvalJ);
-	}
-
-	// Position the previous/next buttons
-	for (var k = 0; k < previousButtonContainer.length; k++) {
-		var toEvalK = 'previousButtonContainer[' + k + '].style.top = "' + ((viewportHeight - 24) / 2) + 'px"';
-		eval(toEvalK);
-	}
-	for (var l = 0; l < nextButtonContainer.length; l++) {
-		var toEvalL = 'nextButtonContainer[' + l + '].style.top = "' + ((viewportHeight - 24) / 2) + 'px"';
-		eval(toEvalL);
-	}
+	}	
 }
 
 window.onload = function() {
 	getElements();
-	calculateImgContainerHeight();
+	calculateDimensions();
 }
 
 window.onresize = function() {
 	getElements();
-	calculateImgContainerHeight();
+	calculateDimensions();
 }

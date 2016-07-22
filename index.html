@@ -17,7 +17,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
     		$('#fullpage').fullpage({
-    			anchors: ['firstPage', 'secondPage', 'thirdPage']
+    			anchors: ['Page01', 'Page02', 'Page03', 'Page04', 'Page05', 'Page06', 'Page07', 'Page08']
     		});
 		});
 	</script>
@@ -26,17 +26,29 @@
 <body>
 
 	<div id="fullpage">
+		
+		<!-- Intro Page.................................................................................-->
+
 		<div class="section" id="section0">
 			<div class="container-fluid top-hero vertical-center">
+
+				<div class="arrow-down-container"><i class="fa fa-arrow-down nav-fa floating" aria-hidden="true"></i></div>
+
 				<div class="wrapper">
 
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-sm-9 col-sm-offset-1">
 							<div>
 								<p class="heading">Sébastien Phlix<span id="social-icons">
-									<a href="https://twitter.com/sebastienphl" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-									<a href="https://fr.linkedin.com/in/sphlix" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-									<a href="https://github.com/nedphlix" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>								
+									<a href="https://twitter.com/sebastienphl" target="_blank" class="intro-fa-link">
+										<i class="fa fa-twitter-square" aria-hidden="true"></i>
+									</a>
+									<a href="https://fr.linkedin.com/in/sphlix" target="_blank" class="intro-fa-link">
+										<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+									</a>
+									<a href="https://github.com/nedphlix" target="_blank" class="intro-fa-link">
+										<i class="fa fa-github-square" aria-hidden="true"></i>
+									</a>								
 								</span></p>
 							</div>
 						</div>
@@ -46,7 +58,7 @@
 						<div class="col-md-6 col-md-offset-3 col-sm-9 col-sm-offset-1">
 							<div>
 								<p>
-									<br>I'm a final-year grad student in business and currently live in Paris, France. With some friends, I'm building <a href="http://bloomsource.co/" class="link" target="_blank">Bloomsource</a>, the first collaborative startup library.
+									<br>I'm a final-year grad student in business and currently live in Paris, France. With some friends, I'm building <a href="http://bloomsource.co/" class="intro-link" target="_blank">Bloomsource</a>, the first collaborative startup library.
 								</p>
 							</div>
 						</div>
@@ -56,7 +68,7 @@
 						<div class="col-md-6 col-md-offset-3 col-sm-9 col-sm-offset-1">
 							<div>
 								<p>
-									In my free time, <a href="https://www.google.fr/maps/@30.332886,13.6644984,3z/data=!4m2!6m1!1szlg788xnDJ6A.kzyQR-z44gLQ?hl=en" class="link" target="_blank">I love traveling</a> and sometimes take <a href="https://www.instagram.com/nedphlix/" class="link" target="_blank">pictures</a> from the places I go.
+									In my free time, <a href="https://www.google.fr/maps/@30.332886,13.6644984,3z/data=!4m2!6m1!1szlg788xnDJ6A.kzyQR-z44gLQ?hl=en" class="intro-link" target="_blank">I love traveling</a> and sometimes take <a href="https://www.instagram.com/nedphlix/" class="intro-link" target="_blank">pictures</a> from the places I go.
 								</p>
 							</div>
 						</div>
@@ -66,7 +78,7 @@
 						<div class="col-md-6 col-md-offset-3 col-sm-9 col-sm-offset-1">
 							<div>
 								<p class="social-text">
-									Apart from that, I'm <a href="https://www.freecodecamp.com/nedphlix" class="link" target="_blank">learning how to program</a> with JavaScript. You can scroll down to see what I've coded till now.
+									Apart from that, I'm <a href="https://www.freecodecamp.com/nedphlix" class="intro-link" target="_blank">learning how to program</a> with JavaScript. You can scroll down to see what I've coded till now.
 								</p>
 							</div>
 						</div>
@@ -75,131 +87,338 @@
 			</div>
 		</div>
 
+		<!-- Portfolio Section 1.................................................................................-->
+
 		<div class="section" id="section1">
 			<div class="container-fluid">
-				<a href="index.html#firstPage">
-					<div class="btn-previous-container">
-						<div class="btn-previous-placeholder-container">
-							<div class="btn-previous-placeholder btn-previous-placeholder-top arrow-up"></div>
-							<div class="btn-previous-placeholder btn-previous-placeholder-bottom"></div>
-						</div>
-						<div class="btn-previous-text-container">
-							<p class="btn-previous-p">Previous&nbsp;<i class="fa fa-arrow-up" aria-hidden="true"></i></p>
-						</div>
-					</div>
-				</a>
-				<a href="index.html#thirdPage">	
-					<div class="btn-next-container">
-						<div class="btn-next-text-container">
-							<p class="btn-previous-p"><i class="fa fa-arrow-down" aria-hidden="true"></i>&nbsp;Next</p>
-						</div>
-						<div class="btn-previous-placeholder-container">
-							<div class="btn-previous-placeholder btn-previous-placeholder-top"></div>
-							<div class="btn-previous-placeholder btn-previous-placeholder-bottom arrow-down"></div>
-						</div>
-					</div>
-				</a>
+
+				<div class="arrow-up-container"><i class="fa fa-arrow-up nav-fa" aria-hidden="true"></i></div>
+				<div class="arrow-down-container"><i class="fa fa-arrow-down nav-fa" aria-hidden="true"></i></div>
 
 				<div class="row pf-top-row">
-					<div id="pf-upper-left-col" class="col-md-3 col-sm-2"></div>
-					<div class="col-md-6 col-sm-8 pf-upper-mid-col">
-						
-						<div class="pf-tags-placeholder"></div>
-						<div class="pf-tags">Local Weather App<span class="pf-counter">1 of 6</span></div>
-						
+					<div class="col-md-3 col-sm-2"></div>
+						<div class="col-md-6 col-sm-8 pf-upper-mid-col">
+							<div class="pf-title-placeholder"></div>
+							<div class="pf-title">
+								Local Weather App<span class="pf-counter">1 of 6</span>
+							</div>
+						</div>
+					<div class="col-md-3 col-sm-2"></div>			
+				</div> <!--row-->
 
-					</div>
-					<div id="pf-upper-right-col" class="col-md-3 col-sm-2"></div>					
-				</div>
 				<div class="row pf-mid-row">
 					<div class="col-md-3 col-sm-2 pf-mid-left-col"></div>
-					<div id="pf-mid-mid-col" class="col-md-6 col-sm-8 pf-img-col">
+					<div class="col-md-6 col-sm-8 pf-img-col">
 						<div class="pf-img-container">
-							<img src="images/weatherapp.png" class="img-responsive">
+							<img src="images/weatherapp.png" class="img-responsive grow">
 						</div>
 					</div>
-					<div id="pf-mid-right-col" class="col-md-3 col-sm-2 col-sm-2"></div>					
-				</div>
+					<div class="col-md-3 col-sm-2"></div>					
+				</div> <!--row-->
+
 				<div class="row pf-bottom-row">
 					<div class="col-md-3 col-sm-2"></div>
 					<div class="col-md-6 col-sm-8 pf-lower-mid-col">
 						<div class="pf-link-container">
-							<a href="" target="_blank" class="pf-links">View website</a>
-							<a href="" target="_blank" class="pf-links">View on Github</a>
+							<a href="http://nedphlix.github.io/weatherapp/" target="_blank" class="pf-links">View website</a>
+							<a href="https://github.com/nedphlix/weatherapp" target="_blank" class="pf-links">View on Github</a>
 						</div>
 						<div class="pf-description-box">
 							<div class="pf-description-text">
-								Shows the weather in your current location. You can switch between Celsius and Fahrenheit, and change the city. Depending on the weather, a different background image is shown.
+								Shows the weather in your current location. You can change the city and choose between Fahrenheit and Celsius. The background adapts to current weather conditions. Tags: API, JSON, VanillaJS.
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-2"></div>
-				</div>
-			</div>
-		</div>
+				</div> <!--row-->
+			</div> <!--container-fluid-->
+		</div> <!--section-->
+
+		<!-- Section 2 .................................................................................-->
 
 		<div class="section" id="section2">
 			<div class="container-fluid">
-				<a href="index.html#secondPage">
-					<div class="btn-previous-container">
-						<div class="btn-previous-placeholder-container">
-							<div class="btn-previous-placeholder btn-previous-placeholder-top arrow-up"></div>
-							<div class="btn-previous-placeholder btn-previous-placeholder-bottom"></div>
-						</div>
-						<div class="btn-previous-text-container">
-							<p class="btn-previous-p">Previous&nbsp;<i class="fa fa-arrow-up" aria-hidden="true"></i></p>
-						</div>
-					</div>
-				</a>
-				<a href="index.html#fourthPage">	
-					<div class="btn-next-container">
-						<div class="btn-next-text-container">
-							<p class="btn-previous-p"><i class="fa fa-arrow-down" aria-hidden="true"></i>&nbsp;Next</p>
-						</div>
-						<div class="btn-previous-placeholder-container">
-							<div class="btn-previous-placeholder btn-previous-placeholder-top"></div>
-							<div class="btn-previous-placeholder btn-previous-placeholder-bottom arrow-down"></div>
-						</div>
-					</div>
-				</a>
+
+				<div class="arrow-up-container"><i class="fa fa-arrow-up nav-fa" aria-hidden="true"></i></div>
+				<div class="arrow-down-container"><i class="fa fa-arrow-down nav-fa" aria-hidden="true"></i></div>
 
 				<div class="row pf-top-row">
-					<div id="pf-upper-left-col" class="col-md-3 col-sm-2"></div>
-					<div class="col-md-6 col-sm-8  pf-upper-mid-col">
-						<div class="pf-tags-placeholder"></div>
-						<div class="pf-tags">Pomodoro Clock<span class="pf-counter">2 of 6</span></div>
-					</div>
-					<div id="pf-upper-right-col" class="col-md-3 col-sm-2"></div>					
-				</div>
+					<div class="col-md-3 col-sm-2"></div>
+						<div class="col-md-6 col-sm-8 pf-upper-mid-col">
+							<div class="pf-title-placeholder"></div>
+							<div class="pf-title">
+								Pomodoro Clock<span class="pf-counter">2 of 6</span>
+							</div>
+						</div>
+					<div class="col-md-3 col-sm-2"></div>			
+				</div> <!--row-->
+
 				<div class="row pf-mid-row">
 					<div class="col-md-3 col-sm-2 pf-mid-left-col"></div>
-					<div id="pf-mid-mid-col" class="col-md-6 col-sm-8 pf-img-col">
+					<div class="col-md-6 col-sm-8 pf-img-col">
 						<div class="pf-img-container">
-							<img src="images/pomodoro.png" class="img-responsive">
+							<img src="images/pomodoro.png" class="img-responsive grow">
 						</div>
 					</div>
-					<div id="pf-mid-right-col" class="col-md-3 col-sm-2"></div>					
-				</div>
+					<div class="col-md-3 col-sm-2"></div>					
+				</div> <!--row-->
+
 				<div class="row pf-bottom-row">
 					<div class="col-md-3 col-sm-2"></div>
 					<div class="col-md-6 col-sm-8 pf-lower-mid-col">
 						<div class="pf-link-container">
-							<a href="" target="_blank" class="pf-links">View website</a>
-							<a href="" target="_blank" class="pf-links">View on Github</a>
+							<a href="https://nedphlix.github.io/pomodoro/" target="_blank" class="pf-links">View website</a>
+							<a href="https://github.com/nedphlix/pomodoro" target="_blank" class="pf-links">View on Github</a>
 						</div>
 						<div class="pf-description-box">
 							<div class="pf-description-text">
-								Lorem ipsum dolor sit amet, consectetur, sed do eiusmod
-								tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis consequat.
+								<a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="blank" class="credits-link">Pomodoro</a> clock that runs in your browser and plays a sound after each interval. You can customize pomodoro and break length. Tags: VanillaJS.
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-2"></div>
+				</div> <!--row-->
+			</div> <!--container-fluid-->
+		</div> <!--section-->
+
+		<!-- Section 3 - Javascript Calculator................................................................-->
+
+		<div class="section" id="section3">
+			<div class="container-fluid">
+
+				<div class="arrow-up-container"><i class="fa fa-arrow-up nav-fa" aria-hidden="true"></i></div>
+				<div class="arrow-down-container"><i class="fa fa-arrow-down nav-fa" aria-hidden="true"></i></div>
+
+				<div class="row pf-top-row">
+					<div class="col-md-3 col-sm-2"></div>
+						<div class="col-md-6 col-sm-8 pf-upper-mid-col">
+							<div class="pf-title-placeholder"></div>
+							<div class="pf-title">
+								Javascript Calculator<span class="pf-counter">3 of 6</span>
+							</div>
+						</div>
+					<div class="col-md-3 col-sm-2"></div>			
+				</div> <!--row-->
+
+				<div class="row pf-mid-row">
+					<div class="col-md-3 col-sm-2 pf-mid-left-col"></div>
+					<div class="col-md-6 col-sm-8 pf-img-col">
+						<div class="pf-img-container">
+							<img src="images/calc.png" class="img-responsive grow">
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-2"></div>					
+				</div> <!--row-->
+
+				<div class="row pf-bottom-row">
+					<div class="col-md-3 col-sm-2"></div>
+					<div class="col-md-6 col-sm-8 pf-lower-mid-col">
+						<div class="pf-link-container">
+							<a href="https://nedphlix.github.io/calculator/" target="_blank" class="pf-links">View website</a>
+							<a href="https://github.com/nedphlix/calculator" target="_blank" class="pf-links">View on Github</a>
+						</div>
+						<div class="pf-description-box">
+							<div class="pf-description-text">
+								You can add, subtract, multiply, and divide two numbers. Also allows chaining mathematical operations, and clearing the input field. Tags: VanillaJS.
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-2"></div>
+				</div> <!--row-->
+			</div> <!--container-fluid-->
+		</div> <!--section-->
+
+		<!-- Section 4 Tic Tac Toe.....................................................................-->
+
+		<div class="section" id="section4">
+			<div class="container-fluid">
+
+				<div class="arrow-up-container"><i class="fa fa-arrow-up nav-fa" aria-hidden="true"></i></div>
+				<div class="arrow-down-container"><i class="fa fa-arrow-down nav-fa" aria-hidden="true"></i></div>
+
+				<div class="row pf-top-row">
+					<div class="col-md-3 col-sm-2"></div>
+						<div class="col-md-6 col-sm-8 pf-upper-mid-col">
+							<div class="pf-title-placeholder"></div>
+							<div class="pf-title">
+								Tic Tac Toe Game<span class="pf-counter">4 of 6</span>
+							</div>
+						</div>
+					<div class="col-md-3 col-sm-2"></div>			
+				</div> <!--row-->
+
+				<div class="row pf-mid-row">
+					<div class="col-md-3 col-sm-2 pf-mid-left-col"></div>
+					<div class="col-md-6 col-sm-8 pf-img-col">
+						<div class="pf-img-container">
+							<img src="images/tictactoe.png" class="img-responsive grow">
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-2"></div>					
+				</div> <!--row-->
+
+				<div class="row pf-bottom-row">
+					<div class="col-md-3 col-sm-2"></div>
+					<div class="col-md-6 col-sm-8 pf-lower-mid-col">
+						<div class="pf-link-container">
+							<a href="https://nedphlix.github.io/tictactoe/" target="_blank" class="pf-links">View website</a>
+							<a href="https://github.com/nedphlix/tictactoe" target="_blank" class="pf-links">View on Github</a>
+						</div>
+						<div class="pf-description-box">
+							<div class="pf-description-text">
+								You can play a game of Tic Tac Toe with the computer. The game resets after each game so you can play again. Tags: Objects, Inheritance, VanillaJS.
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-2"></div>
+				</div> <!--row-->
+			</div> <!--container-fluid-->
+		</div> <!--section-->
+
+		<!-- Section 5 Random Quote Machine....................................................................-->
+
+		<div class="section" id="section5">
+			<div class="container-fluid">
+
+				<div class="arrow-up-container"><i class="fa fa-arrow-up nav-fa" aria-hidden="true"></i></div>
+				<div class="arrow-down-container"><i class="fa fa-arrow-down nav-fa" aria-hidden="true"></i></div>
+
+				<div class="row pf-top-row">
+					<div class="col-md-3 col-sm-2"></div>
+						<div class="col-md-6 col-sm-8 pf-upper-mid-col">
+							<div class="pf-title-placeholder"></div>
+							<div class="pf-title">
+								Random Quote Machine<span class="pf-counter">5 of 6</span>
+							</div>
+						</div>
+					<div class="col-md-3 col-sm-2"></div>			
+				</div> <!--row-->
+
+				<div class="row pf-mid-row">
+					<div class="col-md-3 col-sm-2 pf-mid-left-col"></div>
+					<div class="col-md-6 col-sm-8 pf-img-col">
+						<div class="pf-img-container">
+							<img src="images/quotes.png" class="img-responsive grow">
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-2"></div>					
+				</div> <!--row-->
+
+				<div class="row pf-bottom-row">
+					<div class="col-md-3 col-sm-2"></div>
+					<div class="col-md-6 col-sm-8 pf-lower-mid-col">
+						<div class="pf-link-container">
+							<a href="https://nedphlix.github.io/quotes/" target="_blank" class="pf-links">View website</a>
+							<a href="https://github.com/nedphlix/quotes" target="_blank" class="pf-links">View on Github</a>
+						</div>
+						<div class="pf-description-box">
+							<div class="pf-description-text">
+								Shows a random quote on programming. You can request a new quote, and tweet the ones you like. Tags: API, JSON, VanillaJS.
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-2"></div>
+				</div> <!--row-->
+			</div> <!--container-fluid-->
+		</div> <!--section-->
+
+		<!-- Section 6 Vortex.......................................................................-->
+
+		<div class="section" id="section6">
+			<div class="container-fluid">
+
+				<div class="arrow-up-container"><i class="fa fa-arrow-up nav-fa" aria-hidden="true"></i></div>
+				<div class="arrow-down-container"><i class="fa fa-arrow-down nav-fa" aria-hidden="true"></i></div>
+
+				<div class="row pf-top-row">
+					<div class="col-md-3 col-sm-2"></div>
+						<div class="col-md-6 col-sm-8 pf-upper-mid-col">
+							<div class="pf-title-placeholder"></div>
+							<div class="pf-title">
+								Personal Portfolio<span class="pf-counter">6 of 6</span>
+							</div>
+						</div>
+					<div class="col-md-3 col-sm-2"></div>			
+				</div> <!--row-->
+
+				<div class="row pf-mid-row">
+					<div class="col-md-3 col-sm-2 pf-mid-left-col"></div>
+					<div class="col-md-6 col-sm-8 pf-img-col">
+						<div class="pf-img-container">
+							<img src="images/vortex.jpg" class="img-responsive grow">
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-2"></div>					
+				</div> <!--row-->
+
+				<div class="row pf-bottom-row">
+					<div class="col-md-3 col-sm-2"></div>
+					<div class="col-md-6 col-sm-8 pf-lower-mid-col">
+						<div class="pf-link-container">
+							<a href="https://github.com/nedphlix/sebastien" target="_blank" class="pf-links">View on Github</a>
+						</div>
+						<div class="pf-description-box">
+							<div class="pf-description-text">
+								The page you are currently on (check out the concept of <a href="https://www.youtube.com/watch?v=rcv1IokfS0A&ab_channel=CentreNationaldeRechercheduVortex" target="_blank" class="credits-link">vortex</a>.) Tags: Bootstrap, Animations, Fullpage JS Plugin, VanillaJS.
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-2"></div>
+				</div> <!--row-->
+			</div> <!--container-fluid-->
+		</div> <!--section-->		
+
+		<!-- Credits Page.................................................................................-->
+
+		<div class="section" id="section0">
+			<div class="container-fluid top-hero vertical-center">
+
+				<div class="arrow-up-container"><i class="fa fa-arrow-up nav-fa" aria-hidden="true"></i></div>
+
+				<div class="intro-wrapper">
+
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-sm-9 col-sm-offset-1">
+							<div>
+								<p class="heading">Credits</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-sm-9 col-sm-offset-1">
+							<div>
+								<br>
+								<ul class="credits-ul">
+									<li class="credits-li">Icons: 
+										<a href="http://fontawesome.io/" target="_blank">Font Awesome</a> 
+									</li>
+									<li class="credits-li">Typography: 
+										<a href="https://www.google.com/fonts/specimen/Crimson+Text" target="_blank">Crimson Text</a>,&nbsp;
+										<a href="https://www.google.com/fonts/specimen/Montserrat" target="_blank">Montserrat</a> 
+									</li>
+									<li class="credits-li">Images: 
+										<a href="http://www.freepik.com" target="_blank">kjpargeter (selected by Freepik)</a>,&nbsp;
+										<a href="https://sylwiamazurek.wordpress.com/" target="_blank">Sylwia Mazurek</a> 
+									</li>
+									<li class="credits-li">Code: 
+										<a href="http://alvarotrigo.com/fullPage/" target="_blank">Fullpage JS</a>,&nbsp;
+										<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>,&nbsp;
+										<a href="http://justinaguilar.com/animations/index.html#" target="_blank">Justin Aguilar Animations</a> 
+									</li>
+									<br>
+									<a href="index.html#Page01" class="helper-link">&mdash;&nbsp;Back to top</a>
+									<br><br>
+									<li class="credits-li">&copy;&nbsp;2016 Sébastien Phlix</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+
+	</div> <!--id=fullpage-->
 
 </body>
 </html>
