@@ -279,7 +279,7 @@ a:hover {
 
 .pf-description-box {
 	height: 90px;
-	width: 120px; /* calculated in JS */
+	width: 800px; /* calculated in JS */
 	padding: 10px 10px 10px 10px;
 	position: relative;
 	z-index: 1;
