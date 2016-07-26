@@ -1,7 +1,8 @@
 var imgContainer, pfDescBox, pfLinkContainer, pfTagsPlaceholder;
 var pfTopRow, pfMidRow, pfBottomRow;
+var fullpageId, arrowUp, arrowDown;
 
-var viewportHeight = document.documentElement.clientHeight;
+var viewportHeight, viewportWidth;
 
 function getElements() {
 	imgContainer = document.querySelectorAll(".pf-img-container");
@@ -11,11 +12,15 @@ function getElements() {
 	pfTopRow = document.querySelectorAll(".pf-top-row");
 	pfMidRow = document.querySelectorAll(".pf-mid-row");
 	pfBottomRow = document.querySelectorAll(".pf-bottom-row");
+
+	fullpageId = document.getElementById("fullpage");
 }
 
 function calculateDimensions() {
 
 	// This is for the portfolio part
+	viewportHeight = document.documentElement.clientHeight;
+	viewportWidth = document.documentElement.clientWidth;
 
 	// Calculate the image container height, it is set to its width, which in turn is 100% of the mid column
 	var imgContainerWidth = imgContainer[0].offsetWidth;
@@ -48,6 +53,11 @@ function calculateDimensions() {
 		var toEvalG = 'pfDescBox[' + g + '].style.left = "' + (imgContainerWidth / 2) + 'px"';
 		eval(toEvalG);
 	}
+	for (var ga = 0; ga < pfDescBox.length; ga++) {
+		var pfDescBoxHeight = pfDescBox[ga].offsetHeight;
+		var toEvalGA = 'pfDescBox[' + ga + '].style.top = "' + (-1 * (pfDescBoxHeight)) + 'px"';
+	 	eval(toEvalGA);
+	}
 	for (var h = 0; h < pfLinkContainer.length; h++) {
 		var toEvalH = 'pfLinkContainer[' + h + '].style.width = "' + (imgContainerWidth / 2) + 'px"';
 		eval(toEvalH);
@@ -62,12 +72,59 @@ function calculateDimensions() {
 	}	
 }
 
+function responsive() {
+
+	viewportHeight = document.documentElement.clientHeight;
+	viewportWidth = document.documentElement.clientWidth;
+
+	console.log(viewportWidth + " x " + viewportHeight);
+	if (viewportWidth <= 768) {
+		console.log("mobile phone");
+	} else if (viewportWidth <= 992) {
+		console.log("tablet vertical");
+	} else if (viewportWidth <= 1024) {
+		console.log("tablet horizontal");
+	}
+}
+
+document.onreadystatechange = function() {
+	var state = document.readyState;
+	var fullpage = document.querySelectorAll(".anim-fullpage");
+	if (state == 'interactive') {
+		fullpage[0].style.visibility="hidden";
+	} else if (state == 'complete') {
+		setTimeout(function() {
+			document.getElementById('load').className += " animated fadeOut";
+
+			setTimeout(function() {
+				document.getElementById('load').style.visibility="hidden";
+				document.getElementById('intro-content').style.visibility="hidden";
+				document.getElementById('social-icons').style.visibility="hidden";				
+				fullpage[0].style.visibility="visible";				
+				document.getElementById('intro-heading').style.visibility="visible";				
+				document.getElementById('intro-heading').className += " animated fadeIn";
+
+				setTimeout(function() {
+					document.getElementById('intro-content').style.visibility="visible";
+					document.getElementById('social-icons').style.visibility="visible";				
+					document.getElementById('social-icons').className += " animated fadeIn";
+					document.getElementById('intro-content').className += " animated fadeIn";
+				}, 1000);
+			}, 1000);
+		}, 2000);
+		
+
+	}
+}
+
 window.onload = function() {
 	getElements();
 	calculateDimensions();
+	responsive();
 }
 
 window.onresize = function() {
 	getElements();
 	calculateDimensions();
+	responsive();
 }
