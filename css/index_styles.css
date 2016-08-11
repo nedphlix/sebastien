@@ -1,12 +1,12 @@
 /* General Remarks ................................................................................ 
 
 Original colors:
-Red: #cf1b41
-Orange: #e87d2b
+Red: #000
+Orange: #000
 
 New colors:
-Heading: #9D4D10;
-Link hover: #EA8D47;
+Heading: #000;
+Link hover: #cf1b41;
 Grey: #6D6E71;
 
 Structure of this file:
@@ -18,6 +18,7 @@ Structure of this file:
 	Navigation Arrows
 	Specifics - Introduction
 	Specifics - Portfolio
+	Specifics - Work Experience
 	Specifics - Credits
 
 */
@@ -156,13 +157,30 @@ Structure of this file:
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 12px;
-	padding: 0px !important;
+	color: #FFF;
+	padding: 0px 0px 0px 75px !important;
 
-	background: url("../images/background.jpg") no-repeat center center fixed; 
+	background: url("../images/vector2.jpg") no-repeat center center fixed; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
+}
+
+#left-bar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 75px;
+	background-color: #000;
+	text-align: center;
+	padding-top: 25px;
+}
+
+#left-bar-burger-cont {
+	color: #FFF;
+	font-size: 25px;
 }
 
 .section {
@@ -213,54 +231,52 @@ body {
 /* Text & Links .................................................................................... */
 
 p {
-	color: #000;
+	color: #fff;
 	line-height: 30px;
 	font-size: 16px;
 }
 
 .heading {
-	color: #9D4D10;
-	font-family: 'Crimson Text', serif;
+	color: #FFF;
 	font-size: 30px;
 }
 
 .nav-fa {
 	font-size: 16px;
-	color: #6D6E71;
+	color: #FFF;
 }
 
 a, a:focus {
 	text-decoration: none;
-	color: #000;
-	box-shadow: inset 0 -1px 0 0 #000;
+	color: #FFF;
+	box-shadow: inset 0 -1px 0 0 #FFF;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;	
 }
 
 a:hover {
 	text-decoration: none;
-	color: #EA8D47;
-	box-shadow: inset 0 -1px 0 0 #EA8D47;
+	color: #cf1b41;
+	box-shadow: inset 0 -1px 0 0 #cf1b41;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
 
 .intro-fa-link, .intro-fa-link:focus {
 	box-shadow: none;
-	color: #000;
+	color: #FFF;
 	margin-left: 5px;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
 
 .intro-fa-link:hover {
-	color: #EA8D47;
 	box-shadow: none;
 }
 
 .intro-link, .intro-link:focus {
-	color: #9D4D10;
-	box-shadow: inset 0 -1px 0 0 #9D4D10;
+	color: #FFF;
+	box-shadow: inset 0 -1px 0 0 #FFF;
 }
 
 .pf-links {
@@ -271,8 +287,18 @@ a:hover {
 	margin-right: 12px;
 }
 
+.credits-cta-text {
+	font-size: 32px;
+	padding-bottom: 3px;
+	border-bottom: solid 3px #FFF;
+}
+
 .helper-link, .helper-link:focus {
-	color: #6D6E71;
+	box-shadow: none;
+}
+
+.helper-link:hover {
+	color: #cf1b41;
 	box-shadow: none;
 }
 
@@ -312,14 +338,11 @@ a:hover {
 	width: 100%;
 	line-height: 30px;
 	font-size: 30px;
-	font-family: 'Crimson Text';
 }
 
 .pf-counter {
 	margin-left: 15px;
 	font-size: 12px;
-	font-family: 'Montserrat', sans-serif;
-	color: #000;
 	float: right;
 	line-height: 36px;
 }
@@ -353,7 +376,7 @@ a:hover {
 	left: 50%; /* calculated in JS */
 	display: flex;
 	align-items: center;
-	background-color: rgba(242,242,238, 0.9);
+	background-color: rgba(0,0,0, 0.3);
 	border-radius: 1px;
 	vertical-align: center;
 	text-align: left;
@@ -363,18 +386,41 @@ a:hover {
 	line-height: 21px;
 }
 
-/* Specifics - Credits .................................................................................... */
+/* Specifics - Work Experience .................................................................................... */
 
-.credits-ul {
-	font-size: 16px;
-	line-height: 30px;
+.work-exp-col {
 	padding-left: 0px;
 }
 
-.credits-li {
-	list-style: none;
+.work-exp-title {
+	margin-bottom: 32px;
+	text-align: center;
 }
 
-#credits-back-to-top {
-	float: right;
+.work-exp-ul {
+	padding-left: 0px;
+}
+
+.work-exp-li {
+	list-style: none;
+	margin-top: 6px;
+	line-height: 18px;
+}
+
+.work-exp-li-heading {
+	font-size: 16px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+/* Specifics - Credits .................................................................................... */
+
+.credits-cta {
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.credits-copyright {
+	text-align: center;
+	font-size: 12px;
 }
