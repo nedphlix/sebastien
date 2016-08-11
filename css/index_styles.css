@@ -117,6 +117,8 @@ Structure of this file:
 	transform: scale(1.03); 
 }
 
+/* floating currently not used*/
+
 .floating{
 	animation-name: floating;
 	-webkit-animation-name: floating;
